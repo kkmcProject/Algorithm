@@ -15,7 +15,7 @@ def filter_csv(input_csv, output_csv):
         print(f"All rows in '{input_csv}' have non-numeric first columns. Deleting the file.")
         os.remove(input_csv)
     else:
-        filtered_df.to_csv(output_csv, index=False)
+        filtered_df.to_csv(output_csv, index=False, encoding='utf-8-sig')
         print(f"Filtered rows saved to '{output_csv}'")
 
 
