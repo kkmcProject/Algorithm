@@ -55,8 +55,8 @@ def merge_csv_files_by_date(input_directory, output_directory):
 
 def main():
     # 예제 디렉토리 경로
-    input_directory = '/tmp/pycharm_project_138/data/csv_preprocessed'
-    output_directory = '/tmp/pycharm_project_138/data/merged'
+    input_directory = '../csv_preprocessed'
+    output_directory = '../data/merged'
 
     # 출력 디렉토리가 존재하지 않으면 생성
     if not os.path.exists(output_directory):
