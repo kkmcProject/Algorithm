@@ -7,8 +7,9 @@ def filter_csv(input_csv, output_csv):
     # CSV 파일 읽기
     df = pd.read_csv(input_csv)
     print(df)
-    # 첫 열이 숫자인 행만 필터링
-    filtered_df = df[df.iloc[:, 0].apply(lambda x: str(x).isdigit())]
+    filtered_df = df.dropna(subset=[df.columns[1]])
+    filtered_df = filtered_df[filtered_df.iloc[:, 0].apply(lambda x: str(x).isdigit())]
+
     print(filtered_df)
     # 필터링된 DataFrame을 새로운 CSV 파일로 저장하거나 모든 행이 삭제된 경우 파일 삭제
     if filtered_df.empty:
