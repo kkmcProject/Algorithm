@@ -55,7 +55,7 @@ def merge_csv_files_by_date(input_directory, output_directory):
 
 def main():
     # 예제 디렉토리 경로
-    input_directory = '../csv_preprocessed'
+    input_directory = '../data/csv_preprocessed'
     output_directory = '../data/merged'
 
     # 출력 디렉토리가 존재하지 않으면 생성
