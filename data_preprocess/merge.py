@@ -46,7 +46,7 @@ def merge_csv_files_by_date(input_directory, output_directory):
 
         # 모든 DataFrame을 행으로 합치기
         merged_df = pd.concat(dataframes, ignore_index=True)
-
+        merged_df = merged_df.iloc[1:]
         # 합쳐진 DataFrame을 새로운 CSV 파일로 저장
         output_file = os.path.join(output_directory, f"작업계획서({date}).csv")
         merged_df.to_csv(output_file, index=False, encoding='utf-8-sig')
